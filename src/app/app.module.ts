@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TemplateComponent } from './template/template.component';
 import { BoucleComponent } from './boucle/boucle.component';
 import { TodoComponent } from './todo/todo.component';
+import { TodoService } from './shared/todo.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { TodoComponent } from './todo/todo.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    TodoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TodoService} from '../shared/todo.service';
 
 @Component({
   selector: 'app-todo',
@@ -6,21 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-  liste:string[] = ['lire', 'faire', 'voir', 'visiter'];
+  liste:string[];
 
   newTodo:string;
 
-  constructor() { }
+  constructor(private todoService:TodoService) { 
+  }
 
   ngOnInit() {
+    this.liste = this.todoService.getTodos();
   }
 
   addTodo() {
-    this.liste.push(this.newTodo);
+  this.todoService.add(this.newTodo);
   }
 
   removeTodo(index:number) {
-    this.liste.splice(index,1);
+    this.todoService.remove(index);
   }
 
 }
