@@ -1,12 +1,7 @@
-<!-- <h1>{{title}}</h1> -->
 <!-- Les parenthèses indiques des valeurs allant de
 la vue vers le component (ici, le click sur le h1 
-déclenche la méthode AppComponent.methode()) -->
+déclenche la méthode TemplateComponent.methode()) -->
 <h1 (click)="methode()">{{title}}</h1>
-
-
-<!-- <p [class]="title"></p> -->
-<!-- <input type="texte" [value]="title"> -->
 <!-- Les crochets indique des valeurs allant du
 component vers la vue
 exemple: [class]="title" -- l'élément aura une classe
@@ -15,10 +10,8 @@ Certain attributs angular comme le ngModel font transiter
 les valeurs de la vue vers le component et inversement
 simultanement, elles sont indiquées entre crochets et
 parenthèses [()], banana in a box -->
-<input type="texte" [(ngModel)]="title" [hidden]="inputShown">
+<input type="text" [(ngModel)]="title" [hidden]="inputShown">
 
-
-<!-- <button (click)="inputShown = !inputShown">Toggle</button> ou-->
 <!-- en utilisant le [hidden] qui attend une variable
 de type boolean, faire en sorte que l'input soit
 affiché ou non au click sur un bouton en dessous -->
@@ -28,8 +21,8 @@ affiché ou non au click sur un bouton en dessous -->
 number et indiqué en dessous le résultat de l'addition
 de ces deux input -->
 
-<input type="number" [(ngModel)]="a"> +
-<input type="number" [(ngModel)]="b"> = {{a+b}}
+<input type="number" [(ngModel)]="a">
+<input type="number" [(ngModel)]="b"> {{a+b}}
 
 <p>
     <label>Nom :</label>
@@ -57,3 +50,6 @@ de ces deux input -->
     </p>
 </section>
 <button (click)="afficher()">Afficher</button>
+
+
+<app-boucle></app-boucle>

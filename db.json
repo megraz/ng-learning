@@ -1,5 +1,45 @@
 {
-    "petit-chien": [
-        { "id": 1, "nom": "fido", "race": "corgi" }
-    ]
+  "petit-chien": [
+    {
+      "id": 1,
+      "nom": "fido",
+      "race": "corgi"
+    }
+  ],
+  "todo": [
+    {
+      "message": "deux",
+      "id": 5
+    },
+    {
+      "message": "visiter le mac",
+      "id": 8
+    }
+  ],
+  "chien": [
+    {
+      "id": 1,
+      "nom": "zeus",
+      "race": "dobermann",
+      "dateNaissance": "2015-09-01"
+    },
+    {
+      "id": 2,
+      "nom": "Apollon",
+      "race": "dobermann",
+      "dateNaissance": "2015-09-01"
+    },
+    {
+      "nom": "rex",
+      "race": "corgi",
+      "dateNaissance": "10/05/2010",
+      "id": 3
+    },
+    {
+      "nom": "Trex",
+      "race": "corgi",
+      "dateNaissance": "08/05/2013",
+      "id": 4
+    }
+  ]
 }

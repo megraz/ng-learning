@@ -1,7 +1,7 @@
 <ul>
-    <li *ngFor="let item of liste; index as clef">
-        {{item}}
-        <button (click)="removeTodo(clef)">X</button>
+    <li *ngFor="let item of liste">
+        {{item.message}}
+        <button (click)="removeTodo(item.id)">X</button>
     </li>
 </ul>
 
