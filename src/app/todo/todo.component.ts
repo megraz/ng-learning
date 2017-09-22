@@ -33,6 +33,21 @@ export class TodoComponent implements OnInit {
   }
 
   addTodo() {
+    /*
+    Le addTodo attend un objet de type Todo, donc un
+    objet possédant au moins une propriété message (et 
+    optionnellement une propriété id), on met donc comme
+    argument du addTodo un objet avec un message dont 
+    la valeur sera celle de this.newTodo, qui est une
+    string liée par un ngModel à un input du template.
+    Une fois la requête lancée et la réponse obtenue,
+    on récupère un todo dans le then qui nous est 
+    envoyé par le json-server (c'est en gros l'objet
+    todo que l'on vient de lui ajouter, avec son id 
+    généré en plus). On récupère donc ce todo pour 
+    l'ajouter à notre liste (histoire de pas refaire
+    une requête de getAll, même si ça serait envisageable)
+    */
     this.todoService.addTodo({message:this.newTodo})
     .then((todo) => this.liste.push(todo));
   }
